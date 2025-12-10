@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light"></html>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My day Planner</title>
+    <meta name="description" content="Planifica tu día de manera eficiente con nuestra aplicación de planificación diaria.">
+    <meta name="keywords" content="planificador diario, gestión del tiempo, organización, tareas, agenda y productividad">
+    <meta name="author" content="Romina Teja Martinez">
+    <meta name="copyright" content="Romina Teja 2025">
+    <meta name="aplication-name" content="My day Planner">
+  <!--Bootstrap CSS (CDN)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    link rel="stylesheet">
+     <!--CSS-->
+     <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <!---=========BANNER PROMOCIONAL=========-->
+  <div id="banner" class="p-3 text-center" style="background-color: #D6D6D6; color: black;">
+  Banner de promoción: ¡Comienza hoy a organizar tu día con My day Planner, gestiona tu tiempo y tareas de manera eficiente!
+</div>
+
+<!--===============NAVBAR===============
+Menú superior, se convierte en menú hamburguesa en móviles.--> 
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" aria-label="navegación principal">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <!--Logo de mi página-->
+      <img src="img/My Day Planner.jpg" height="80" alt="Logo de My day Planner"
+       class="me-2">
+      <span class="fw-semibold">My Day Planner</span>
+    </a>
+    <!--Botón menú hamburguesa-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
+    aria-label="Alternar navegación">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <!--Enlaces del menú-->
+     <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+       <li class="nav-item"><a class="nav-link active" aria-current="page"
+          href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#catálogo">Herramientas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="#agregar-imagen">Agregar Imagen</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 📌 Aquí VA EL BOTÓN DE MODO OSCURO -->
+  <li class="nav-item">
+    <button id="themeToggle" class="btn btn-secondary ms-3">Modo OSCURO</button>
+  </li>
+</ul>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--===============CARRUSEL DE IMÁGENES===============-->
+<div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel"
+aria-label="Opciones de diseño y organización">
+
+<!--INDICADORES-->
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" 
+  class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" 
+  aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" 
+  aria-label="Slide 3"></button>
+</div>
+
+  <div class="carousel-inner rounded-3 shadow-sm">
+
+    <!--SLIDE 1-->
+    <div class="carousel-item active">
+      <img src="img/Imagen1.jpg" class="d-block w-100" alt="Imagen de planificación diaria con IA"
+      style="height: 380px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block text-start">
+        <h5 style="color: black;">Organiza tu día a día de forma fácil y sencilla!!</h5>
+        <p style="color: black;">Optimiza tu tiempo y tareas diarias con nuestra aplicación.</p>
+  <a href="#catálogo" class="btn btn-light-sm">Ver más</a>
+</div>
+  </div>
+
+
+  <!--SLIDE 2-->
+    <div class="carousel-item">
+      <img src="img/Imagen2.jpg" class="d-block w-100" alt="Imagen de organización con IA"
+      style="height: 380px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="color: black;">Descubre nuestras herramientas de planificación y haz tu vida maravillosa.</h5>
+        <p style="color: black;">Con ayuda de nuestra aplicación podrás tener todo bajo control.</p>
+        <a href="#catálogo" class="btn btn-light-sm">Ver más</a>
+      </div>
+    </div>
+
+
+    <!--SLIDE 3-->
+    <div class="carousel-item">
+      <img src="img/Imagen3.jpg" class="d-block w-100" alt="Imagen de gestión del tiempo con IA"
+      style="height: 380px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block text-end">
+        <h5 style="color:black;">Gestiona tu tiempo de manera efectiva</h5>
+        <p style="color:black;">Descubre cómo nuestra aplicación puede ayudarte a ser más productivo.</p>
+        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#infoModal">
+         Más información</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--===============SECCIÓN PRINCIPAL===============-->
+ <section class="container my-5">
+  <h1 class="text-center mb-4">Bienvenido a My day Planner</h1>
+  <p class="text-center lead">Planifica tu día de manera rápida y
+    eficiente con ayuda de nuestra página.</p>
+</section> 
+
+
+<!--===============BOTONES===========
+<section class="container my-5">
+  <h2>Botones (Buttons)</h2>
+  <button class="btn btn-primary">Botón Primario</button>
+  <button class="btn btn-secondary">Botón Secundario</button>
+  <button class="btn btn-success">Éxito</button>
+  <button class="btn btn-danger">Peligro</button>
+  <button class="btn btn-warning">Advertencia</button>
+  =================-->
+</section>
+
+<!--======ALERTAS======-->
+<section class="container my-5">
+  <h2>Alertas.</h2>
+  <div class="alert alert-info" role="alert">
+    Aqui tienes herramientas que te ayudarán a comenzar a planificar tu día a día.
+   </div>
+</section>
+
+<!--======TARJETAS======-->
+<section class="container my-5" id="catálogo">
+  <h2 class="mb-4"> Mejores herramientas</h2>
+  <div class="row g-4">
+    <!--Tarjeta básica-->
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">¿Qué actividades tienes para hoy?</h5>
+          <p class="card-text">Organiza tus actividades diarias de manera eficiente.</p>
+          <a href="#" class="btn btn-primary">Ver más</a>|
+        </div>
+      </div>
+    </div>
+
+<!--Tarjeta con imagen-->
+ <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="img/Calendario.jpg" class="card-img-top" alt="Imagen de agenda diaria">
+        <div class="card-body">
+          <h5 class="card-title">Agenda personal de planificación diaria.</h5>
+          <p class="card-text">Mantén seguimiento de tus citas y eventos importantes para tener una vida más tranquila y ordenada.</p>
+          </div>
+       </div>
+     </div>
+
+    <!--Tarjeta con encabezado-->
+           <div class="col-md-4">
+             <div class="card" style="width: 18rem;">
+              <div class="card-header">
+          Registra tus actividades.
+          <div class="card-body">
+           <h5 class="card-title">Calendario.</h5>
+           <p class="card-text">Utiliza nuestras herramientas para maximizar tu eficiencia diaria.</p>
+           <a href="#" class="btn btn-success">Ver calendario</a>
+        </div>
+      <div class="card footer">
+        Comienza ahora y cambia tu vida.
+           </div>
+         </div>
+       </div>
+    </div>
+  </div>
+  </section>
+<!--================ TESTIMONIOS ===================-->
+<section class="container my-5">
+  <h2>Testimonios de nuestros usuarios.</h2>
+
+  <!--======= TESTIMONIO REGULAR =======-->
+  <div class="testimonio-regular d-flex align-items-start 
+  mb-4 p-3 border rounded shadow-sm">
+    <!-- Foto del cliente-->
+    <img src="img/Usuario-R.jpg" alt="Camila Zamora"
+    class="rounded-circle me-3" width="70" height="70">
+    <!-- Contenido del testimonio-->
+    <div>
+      <h5 class="mb-1 fw-bold">Camila Zamora</h5>
+      <p class="mb-0">
+        "Desde que uso My day Planner, mi productividad ha aumentado
+        significativamente. ¡Es increíble, lo recomiendo a todos!"
+      </p>
+      <span class="text-muted">⭐⭐⭐⭐⭐</span>
+    </div>
+  </div>
+
+  <!--======= TESTIMONIO VIP 1=======-->
+  <div class="testimonio-vip d-flex align-items-start 
+  mb-4 p-3 border rounded shadow-sm">
+    <!-- Foto del cliente-->
+    <img src="img/Usuario-V.jpg" alt="Elena López"
+    class="rounded-circle me-3" width="70" height="70">
+    <!-- Contenido del testimonio-->
+    <div>
+      <h5 class="mb-1 fw-bold">Elena López</h5>
+      <p class="mb-0">
+        "Desde que uso My day Planner, mi vida ha cambiado por completo.¡Ahora soy más organizada y eficiente!"
+      </p>
+      <span class="text-muted">⭐⭐⭐⭐⭐</span>
+    </div>
+  </div>
+  
+  <!--======= TESTIMONIO VIP 2=======-->
+  <div class="testimonio-vip d-flex align-items-start mb-4 p-3 border rounded shadow-sm">
+    <!-- Foto del cliente-->
+    <img src="img/Usuario-VIP.jpg" alt="Renata Gómez"
+    class="rounded-circle me-3" width="70" height="70">
+    <!-- Contenido del testimonio -->
+    <div>
+      <h5 class="mb-1 fw-bold">Ricardo Perez</h5>
+      <p class="mb-0">
+        "Empecé a usar My day Planner y nunca he sido tan productiva. Mi vida es mucho más eficiente."
+      </p>
+      <span class="text-muted">⭐⭐⭐⭐⭐</span>
+    </div>
+  </div>
+
+  <!--======= TESTIMONIO REGULAR 2=======-->
+  <div class="testimonio-regular d-flex align-items-start mb-4 p-3 border rounded shadow-sm">
+    <!-- Foto del cliente-->
+    <img src="img/Usuario-Re.jpg" alt="Axel López"
+    class="rounded-circle me-3" width="70" height="70">
+    <!-- Contenido del testimonio -->
+    <div>
+      <h5 class="mb-1 fw-bold">Juan Hernandez</h5>
+      <p class="mb-0">
+        "Empecé a usar My day Planner y ha sido una gran ayuda para organizar mis tareas diarias."
+      </p>
+      <span class="text-muted">⭐⭐⭐⭐⭐</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- ==================== TABS ==================== -->
+  <!-- Chicos: Aquí usamos pestañas para mostrar distintos contenidos -->
+  <section class="container my-5">
+    <h2>Navegación por pestañas (Tabs)</h2>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Profile</button>
+      </li>
+    </ul>
+    <div class="tab-content mt-3">
+      <div class="tab-pane fade show active" id="home" role="tabpanel">
+        <p>Contenido de la pestaña Home: Bienvenido al portal de agenda.</p>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel">
+        <p>Contenido del perfil: Aquí podrás ver tus tareas pendientes.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- ==================== REGISTRO DE ACTIVIDADES ==================== -->
+<section class="container my-5" id="contacto">
+  <h2>Lista de actividades</h2>
+  <form class="p-4 border rounded bg-light shadow-sm">
+
+    <!-- NOMBRE -->
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre completo:</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+    </div>
+
+   <!-- Nueva tarea -->
+<div class="mb-3">
+  <label for="tarea-select" class="form-label">Organiza tu tarea:</label>
+  <select class="form-select" id="tarea-select">
+    <option selected>Selecciona una tarea</option>
+    <option value="Reunión de trabajo">Reunión de trabajo</option>
+    <option value="Cita médica">Cita médica</option>
+    <option value="Tiempo para estudiar">Tiempo para estudiar</option>
+    <option value="otra">Otra actividad</option>
+  </select>
+</div>
+
+<!-- Campo que aparece solo si eligen "Otra actividad" -->
+<div class="mb-3 d-none" id="otra-actividad-container">
+  <label for="otra-actividad" class="form-label">Escribe tu actividad:</label>
+  <input type="text" class="form-control" id="otra-actividad" placeholder="Describe tu actividad">
+</div>
+
+<script>
+  const select = document.getElementById('tarea-select');
+  const otraActividad = document.getElementById('otra-actividad-container');
+
+  select.addEventListener('change', function() {
+    if (this.value === 'otra') {
+      otraActividad.classList.remove('d-none');
+    } else {
+      otraActividad.classList.add('d-none');
+    }
+  });
+</script>
+  
+    <!-- Horario -->
+     <div class="mb-4">
+      <label class ="form-label" for="horario">Selecciona el horario</label>
+      <input class="from-check-input" type="time" name="horario"
+      id="moalidadOnline" value="Online">
+      <label class="form-check-label" for="horario">
+        Horario de la tarea.
+      </label>
+    </div>
+
+    <div class="mb-4">
+      <label class ="form-label">Modalidad</label><br>
+      <input class="from-check-input" type="radio" name="modalidad" id="Presencial">
+      <label for="Presencial">
+        Presencial.</label><br>
+        <input class="from-check-input" type="radio" name="modalidad" id="online" checked>
+        <label for="online">
+          Online</label>
+        </div>
+
+        <!-- Notificaciones -->
+<div class="mb-4">
+  <label class="form-label">¿Deseas recibir notificaciones?</label>
+
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="recibirNotificaciones">
+    <label class="form-check-label" for="recibirNotificaciones">
+      Recibir notificaciones
+    </label>
+  </div>
+</div>
+
+    <!-- Comentarios -->
+    <div class="mb-3">
+      <label for="comentarios" class="form-label">Comentarios Adicionales:</label>
+      <textarea id="comentarios" class="form-control" rows="3" placeholder="Agrega tus comentarios aquí..."></textarea>
+    </div>
+
+    <!-- Botón -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </div>
+
+  </form>
+</section>
+
+
+
+  <!-- ==================== MODAL ==================== -->
+  <!-- Este modal se activa desde el botón "Más información" -->
+  <div class="modal fade" id="modalIA" tabindex="-1" aria-labelledby="modalIALabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalIALabel">Detalles de las actualizaciones.</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          En esta agenda podrás organizar tus tareas de manera fácil y sencilla, dependiendo la importancia y tiempo.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Comenzar a organizar.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== OFFCANVAS ==================== -->
+  <!-- Chicos: Este es un menú lateral oculto que se activa con un botón -->
+  <div class="container text-center my-5">
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasInfo" aria-controls="offcanvasInfo">
+      Abrir información lateral
+    </button>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasInfo" aria-labelledby="offcanvasInfoLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasInfoLabel">Más sobre My Day Planner</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>Descubre más sobre nuestras herramientas de organización y detalles de personalización de tu agenda.</p>
+      <p>Síguenos en redes para más contenido sobre las actualizaciones.</p>
+    </div>
+  </div>
+
+ 
+
+  <!-- ==================== BOOTSTRAP JS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SECCIÓN INTERACTIVA -->
+<section class="container my-5">
+  <h2>Descubre más</h2>
+  <h2 class="mb-4">Interactua con nuestra app</h2>
+</section>
+
+<!-- Evento ONMOUSEOVER -->
+<section class="container my-5">
+  <h3> Evento onmouseover</h3>
+
+  <div id="cuadrarcolor"
+       onmouseover="cambiarColor()"
+       onmouseout="restaurarColor()"
+       class="p-5 text-center border rounded"
+       style="background:#eee; transition:0.3s;">
+    Pasa el cursor por aquí para cambiar el color de fondo.
+  </div>
+</section>
+
+<!-- Evento ONCHANGE -->
+<section class="container my-5">
+  <h3> Evento onchange</h3>
+
+  <label class="fw-bold">Selecciona una tarea:</label>
+  <select id="selecEjemplo" class="form-select w-50"
+          onchange="mostrarSeleccionEjemplo()">
+
+      <option value="">Seleccione una tarea</option>
+      <option value="tarea1">Reunión de trabajo.</option>
+      <option value="tarea2">Gimnasio</option>
+      <option value="tarea3">Estudiar para examen</option>
+      <option value="tarea4">Enviar correo importante</option>
+
+  </select>
+
+  <p id="mensajeOnchange" class="mt-3 fw-bold"></p>
+</section>
+
+<!-- TODO EL JAVASCRIPT JUNTO (IMPORTANTE) -->
+<script>
+
+function necesidadesAyuda(){
+}
+
+function necesitasAyuda() {
+    const contenedor = document.getElementById("contenedorAyuda");
+
+    if (contenedor.style.display === "none") {
+        contenedor.style.display = "block";
+        contenedor.style.animation = "aparecer 0.4s ease";
+        document.getElementById("mensajeOnclick").textContent =
+          "💬 ¡Gracias, lo resolveremos a la brevedad!";
+    } else {
+        contenedor.style.display = "none";
+        document.getElementById("mensajeOnclick").textContent = "";
+    }
+}
+
+const recordatorios = {
+    tarea1: "📝 Recuerda que tu reunión es a las 5pm.",
+    tarea2: "🏋️‍♀️ No olvides pagar la mensualidad hoy.",
+    tarea3: "📚 Dedica al menos 30 minutos a estudiar hoy.",
+    tarea4: "📨 No olvides enviar ese correo antes del mediodía."
+};
+
+function cambiarColor() {
+    const cuadro = document.getElementById("cuadrarcolor");
+    cuadro.style.background = "#d8b6df";
+    cuadro.innerHTML = `
+        🌟 <strong>Mensaje motivacional:</strong> ¡Vas increíble, sigue así! <br>
+        🔔 <strong>Recordatorio:</strong> Elige una tarea para ver su detalle. <br>
+        💡 <strong>Tip del día:</strong> Organiza tus tareas por prioridad.
+    `;
+}
+
+function restaurarColor() {
+    const cuadro = document.getElementById("cuadrarcolor");
+    cuadro.style.background = "#eee";
+    cuadro.innerHTML = "Pasa el cursor por aquí para cambiar el color de fondo.";
+}
+
+function mostrarSeleccionEjemplo() {
+    const seleccion = document.getElementById("selecEjemplo").value;
+    const mensaje = document.getElementById("mensajeOnchange");
+
+    if (recordatorios[seleccion]) {
+        mensaje.textContent = recordatorios[seleccion];
+    } else {
+        mensaje.textContent = "";
+    }
+}
+</script>
+
+<!-- Animación -->
+<style>
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+<!-----======LISTA DE TAREAS======------->
+<section id="lista-tareas" class="container my-5">
+  <h2 class="mb-4">Lista de Tareas</h2>
+  <!----Botón de eliminar el primer elemento------>
+  <button id="btnEliminarPrimero" class="btn btn-danger mb-3">
+    Eliminar primera tarea</button>
+<!---Lista original--->
+  <ul id="listaTareas" class="list-group mb-3">
+    <li class="tarea1" class="list-group-item">Crear tu propio calendario.</li>
+    <li class="tarea2" class="list-group-item">Compartir mi calendario con...</li>
+    <li class="tarea3" class="list-group-item">Guardar el calendario de mis actividades de este mes.</li>
+  </ul>
+<!-----Agregar nueva tarea------>
+<div class="input-group mt-3">
+  <input id="inputNuevaTarea" type="text" class="form-control"
+  placeholder="Escribe una nueva tarea aquí...">
+  <button id="btnAgregarTarea" class="btn btn-success">
+    Agregar Tarea</button>
+</div>
+</section>
+
+<!-- =============== BURBUJA DE CHAT =============== -->
+<div id="chat-bubble">
+    <img src="img/Asistente IA.jpg" alt="Asistente">
+</div>
+
+<!-- =============== CUADRO DE CHAT =============== -->
+<div id="chat-box">
+    <div class="chat-header">
+        <h4>¿Necesitas ayuda?</h4>
+        <span id="close-chat" style="cursor:pointer;">✖</span>
+    </div>
+
+    <div class="chat-body" id="chat-body">
+        <p class="bot-msg">¡Hola! Estoy aquí para ayudarte. Escríbeme tus dudas:</p>
+
+        <input type="text" id="chat-input" placeholder="Escribe tu duda aquí...">
+        <button id="send-btn">Enviar</button>
+    </div>
+</div>
+
+<!-- ============================================================
+     SECCIÓN PARA AGREGAR IMÁGENES
+============================================================ -->
+<section id="agregar-imagen" class="container my-5">
+  <h2 class="mb-4">Agregar Imágenes Dinámicamente</h2>
+  
+  <div class="input-group mb-3">
+    <input type="text" id="inputImagen" class="form-control"
+           placeholder="Ingresa la URL de la imagen">
+    <button id="btnAgregarImagen" class="btn btn-primary">
+      Agregar Imagen
+    </button>
+  </div>
+
+  <div id="galeria" class="row g-3"></div>
+</section>
+
+
+<!-- ============================================================
+     SCRIPT DEL CHAT (DEBE IR ANTES DEL CIERRE DEL BODY)
+============================================================ -->
+<script>
+// ELEMENTOS
+const chatBubble   = document.getElementById("chat-bubble");
+const chatBox      = document.getElementById("chat-box");
+const closeChat    = document.getElementById("close-chat");
+const chatBody     = document.getElementById("chat-body");
+const chatInput    = document.getElementById("chat-input");
+const sendBtn      = document.getElementById("send-btn");
+
+// RESPUESTAS AUTOMÁTICAS
+const respuestasBot = [
+    "¡Entendido! Estoy revisando tu duda 😊",
+    "Gracias por escribirme, ahora te explico…",
+    "¡Perfecto! Dame un momento y te ayudo ✨",
+    "Lo reviso enseguida, gracias por tu mensaje 🙌",
+    "¡Claro! Aquí estoy para ayudarte 💛",
+    "Gracias por preguntar, déjame ayudarte 📝"
+];
+
+// FUNCIONES
+function agregarMensajeUsuario(texto) {
+    const msg = document.createElement("p");
+    msg.classList.add("user-msg");
+    msg.textContent = texto;
+    chatBody.appendChild(msg);
+}
+
+function agregarMensajeBot() {
+    const msg = document.createElement("p");
+    msg.classList.add("bot-msg");
+
+    const respuesta = respuestasBot[Math.floor(Math.random() * respuestasBot.length)];
+    msg.textContent = respuesta;
+
+    chatBody.appendChild(msg);
+}
+
+function enviarMensaje() {
+    const texto = chatInput.value.trim();
+    if (texto === "") return;
+
+    agregarMensajeUsuario(texto);
+    chatInput.value = "";
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    setTimeout(() => {
+        agregarMensajeBot();
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }, 500);
+}
+
+// ABRIR CHAT
+chatBubble.addEventListener("click", () => {
+    chatBox.style.display = "block";
+    chatBubble.style.display = "none";
+});
+
+// CERRAR CHAT
+closeChat.addEventListener("click", () => {
+    chatBox.style.display = "none";
+    chatBubble.style.display = "block";
+});
+
+// BOTÓN ENVIAR
+sendBtn.addEventListener("click", enviarMensaje);
+
+// ENTER
+chatInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        enviarMensaje();
+    }
+});
+</script>
+
+<!-- ============================================================
+     SCRIPT DE LA GALERÍA (CARGA DESPUÉS DEL HTML)
+============================================================ -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const inputImagen = document.getElementById("inputImagen");
+  const btnAgregarImagen = document.getElementById("btnAgregarImagen");
+  const galeria = document.getElementById("galeria");
+
+  btnAgregarImagen.addEventListener("click", function () {
+    const url = inputImagen.value.trim();
+    if (url === "") {
+      alert("Por favor ingresa una URL válida.");
+      return;
+    }
+
+    const col = document.createElement("div");
+    col.classList.add("col-md-4");
+
+    const img = document.createElement("img");
+    img.src = url;
+    img.alt = "Imagen agregada por el usuario";
+    img.classList.add("img-fluid", "rounded", "shadow");
+
+    col.appendChild(img);
+    galeria.appendChild(col);
+
+    inputImagen.value = "";
+  });
+
+});
+</script>
+<script>
+  const html = document.documentElement;
+  const btn = document.getElementById("themeToggle");
+
+  btn.addEventListener("click", () => {
+    const temaActual = html.getAttribute("data-bs-theme");
+    const nuevoTema = temaActual === "dark" ? "light" : "dark";
+    html.setAttribute("data-bs-theme", nuevoTema);
+    btn.textContent = nuevoTema === "dark" ? "Modo claro" : "Modo OSCURO";
+  });
+</script>
+</body>
+</html>
+
+  <script> 
+// ELIMINAR PRIMERA TAREA
+  document.getElementById("btnEliminarPrimero").addEventListener("click", function () {
+    const lista = document.getElementById("listaTareas");
+    if (lista.firstElementChild) {
+      lista.removeChild(lista.firstElementChild);
+    }
+  });
+
+  // AGREGAR NUEVA TAREA
+  document.getElementById("btnAgregarTarea").addEventListener("click", function () {
+    const input = document.getElementById("inputNuevaTarea");
+    const texto = input.value.trim();
+
+    if (texto !== "") {
+      const nuevaTarea = document.createElement("li");
+      nuevaTarea.classList.add("list-group-item");
+      nuevaTarea.textContent = texto;
+
+      document.getElementById("listaTareas").appendChild(nuevaTarea);
+      input.value = "";
+    }
+  });
+</script>
+
+<section class="google-calendar-section">
+    <h2>Mi Google Calendar</h2>
+
+    <div class="calendar-container">
+        <iframe
+            src="https://calendar.google.com/calendar/embed?src=c_classroomcfccba9b%40group.calendar.google.com&ctz=America%2FMexico_City"
+            style="border:0;"
+            width="100%"
+            height="600"
+            frameborder="0"
+            scrolling="no">
+        </iframe>
+    </div>
+</section>
+<!-- ==================== FOOTER ==================== -->
+<footer class="text-center py-4 bg-light mt-5">
+  <p class="mb-0">&copy; 2025 Romina Teja | Todos los derechos reservados</p>
+</footer>
+
+
+</body>
+</html>
